@@ -1,0 +1,170 @@
+.container {
+    background-color: white;
+}
+
+.additional_content_container {
+    background-color: black;
+}
+
+.additional_content {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    width: 75%;
+}
+
+.additional_content a {
+    display: inline-block;
+    color: white;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+}
+
+.image_container {
+    padding: 1rem 0;
+    padding-left: 15px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link_container {
+    width: 50%;
+}
+
+.link_container a {
+    position: relative;
+    padding: 1rem 0;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.link_container a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    transform: scale(0, 1);
+    transition: all 0.45s ease-out;
+}
+
+.link_container a:hover::after {
+    transform: scale(1, 1);
+}
+
+.user_interaction_container a {
+    padding: 1rem 0.7rem;
+    transition: all 0.5s;
+}
+
+.user_interaction_container a:hover {
+    background-color: antiquewhite;
+}
+
+.button_menu {
+    display: none;
+    padding: 0.5rem;
+}
+
+.button_menu:hover {
+    cursor: pointer;
+    outline: 1px solid black;
+}
+
+.hidden_menu, .blur {
+    display: none;
+}
+
+@media screen and (max-width: 57rem) {
+    .additional_content, .nav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .list {
+        display: none;
+    }
+
+    .nav {
+        width: 75%;
+    }
+    
+    .button_menu {
+        display: block;
+    }
+
+    .blur {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    .hidden_menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 260px;
+        background-color: whitesmoke;
+        z-index: 2;
+    }
+
+    .additional_content {
+        display: none;
+        position: absolute;
+        top: 5rem;
+        left: 8rem;
+        width: 30%;
+        z-index: 3;
+    }
+
+    .additional_content a {
+        color: black;
+    }
+
+    .link_container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 11rem;
+        left: 2rem;
+        width: 10rem;
+        z-index: 3;
+    }
+
+    .user_interaction_container {
+        display: none;
+        position: absolute;
+        top: 8.7rem;
+        left: 6.5rem;
+        width: 10rem;
+        z-index: 3;
+    }
+}
+
+
+

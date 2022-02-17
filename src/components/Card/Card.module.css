@@ -1,0 +1,116 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem 2rem;
+    width: 18rem;
+    height: 24rem;
+    min-width: 18rem;
+    min-height: 24rem;
+}
+
+.image_container {
+    margin-bottom: 1.5rem;
+    padding: 4rem 0 1rem;
+    width: 100%;
+    background: radial-gradient(rgb(250, 244, 244), rgb(240, 226, 226));
+}
+
+.container img {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+
+.container h4 {
+    opacity: 0;
+    color: red;
+    letter-spacing: 1px;
+    transition: all 0.7s;
+}
+
+.container h5 {
+    margin-bottom: 1rem;
+    font-size: 120%;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.container h6 {
+    letter-spacing: 0.2px;
+}
+
+.interaction_container {
+    opacity: 0;
+    transform: translateX(20px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 20px;
+    right: 20px;
+    transition: all 0.5s;
+}
+
+.interaction_container img {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: white;
+}
+
+.item_action {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.interaction_container img:hover, .item_action h4:hover {
+    cursor: pointer;
+}
+
+.container:hover .interaction_container {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.container:hover .item_action h4 {
+    opacity: 1;
+}
+
+/* @media screen and (max-width: 82.5rem) {
+    .container {
+        width: 16rem;
+        height: 22rem;
+        min-width: 16rem;
+        min-height: 22rem;
+    }
+} */
+
+@media screen and (max-width: 68.7rem) {
+    .container {
+        width: 16rem;
+        height: 22rem;
+        min-width: 16rem;
+        min-height: 22rem;
+    }
+}
+
+@media screen and (max-width: 57rem) {
+    .container {
+        width: 17rem;
+        height: 23rem;
+        min-width: 17rem;
+        min-height: 23rem;
+        margin: 0 0 2.5rem;
+    }
+}
+
+@media screen and (max-width: 35.5rem) {
+    .container {
+        width: 70%;
+        height: 20%;
+        min-width: 0;
+        min-height: 0;
+    }
+}
+

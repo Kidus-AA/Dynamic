@@ -1,0 +1,188 @@
+.container {
+    position: relative;
+    width: 100%;
+    background-color: rgb(212, 192, 161);
+}
+
+.carousel_container {
+    margin: auto;
+    width: 75%;
+    min-height: 675px;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.info_container {
+    padding: 12rem 0 3rem;
+    margin-left: 3rem;
+    max-width: 550px;
+}
+
+.h1, .h3, .h5 {
+    letter-spacing: 2px;
+    margin: 2rem 0;
+}
+
+.h1 {
+    font-size: 500%;
+}
+
+.h3 {
+    font-weight: bolder;
+    font-size: 130%;
+    color: rgb(236, 83, 83);
+}
+
+.h5 {
+    font-size: 100%;
+}
+
+.arrows {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.arrows img {
+    padding: 1rem;
+}
+
+.arrows:hover {
+    background-color: antiquewhite;
+}
+
+.leftArrow {
+    left: 30px;
+    top: 50%;
+    transform: rotateZ(-180deg);
+}
+
+.rightArrow {
+    right: 30px;
+    top: 50%;
+}
+
+.fade_in_carousel {
+    opacity: 0;
+    animation-name: fadeInCarousel;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInCarousel {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade_in_information *:not(.fade_in_delayed) {
+    animation-name: fadeInInfo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInInfo {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);;
+    }
+}
+
+.fade_in_sideway_information_rl {
+    opacity: 0;
+    animation-name: fadeInInfoSidewayRL;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInInfoSidewayRL {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.fade_in_sideway_information_lr {
+    opacity: 0;
+    animation-name: fadeInInfoSidewayLR;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInInfoSidewayLR {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.fade_in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 57rem) {
+    .carousel_container {
+        width: 98%;
+        min-height: auto;
+    }
+
+    .info_container {
+        padding: 5rem 0 5rem;
+    }
+
+    .leftArrow {
+        top: auto;
+        left: 0;
+        bottom: 0;
+        right: 50%;
+    }
+
+    .rightArrow {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 32rem) {
+    .h1 {
+        font-size: 300%;
+    }
+}

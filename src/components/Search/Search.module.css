@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+    background-color: rebeccapurple;
+    margin-bottom: 2rem;
+}
+
+.searchBar {
+    padding: 0.8rem 0;
+    padding-left: 0.5rem;
+    border: 1px solid rgb(117, 110, 110);
+    font-size: 1em;
+    width: 97%;
+}
+
+.searchBar:focus {
+    outline: none;
+}
+
+.container:focus-within .icon {
+    opacity: 0;
+}
+
+.icon {
+    position: absolute;
+    top: 15px;
+    right: 1rem;
+}
