@@ -1,6 +1,5 @@
 .container {
     position: relative;
-    background-color: rebeccapurple;
     margin-bottom: 2rem;
 }
 
@@ -24,4 +23,10 @@
     position: absolute;
     top: 15px;
     right: 1rem;
+}
+
+@media screen and (max-width: 25rem) {
+    .container {
+        width: 75%;
+    }
 }
