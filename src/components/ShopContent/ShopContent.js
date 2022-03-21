@@ -37,6 +37,10 @@ const ShopContent = (props) => {
             <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
             <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
             <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
+            <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
+            <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
+            <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
+            <Card image={shirt} name={"Shirt"} price={"$49.99"}/>
         </div>
     )
 }
